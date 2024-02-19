@@ -1,0 +1,277 @@
+
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+
+
+}
+
+
+h1 {
+    text-align: center;
+}
+/* 
+.Manette {
+    background-color: rgba(31, 30, 41, 0.979);
+    border-radius: 30px;
+    height: 700px;
+    width: 270px;
+    padding: 50px;
+    margin-left: 810px;
+    
+
+
+
+} */
+
+
+
+
+.Manette {
+    background-color: rgba(31, 30, 41, 0.979);
+    border-radius: 30px;
+    height: 1450%;
+    width: 550%;
+    padding: 50%;
+    
+   
+    
+
+
+
+}
+
+
+.buttonManette {
+    display: flex;
+    border-radius: 24px;
+    padding: 15px;
+    margin-left: 100px;
+    display: flex;
+    
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+}
+
+div {
+    padding: 0;
+    margin: 0;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+}
+
+.wrapper {
+    position: absolute;
+    height: 9em;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: drop-shadow(7px 5px 5px#030100);
+    margin-left: 105px;
+}
+
+.center {
+    z-index: 2;
+    top: 3em;
+}
+
+.center-circle {
+    position: static;
+    /*   background: #222532; */
+    background: #525252;
+    /*   background: #90E4FF; */
+    /*   background: #7FFFB5; */
+    border-radius: 100%;
+    margin: auto;
+    width: 75%;
+    height: 75%;
+    z-index: 3;
+}
+
+.up,
+.right,
+.down,
+.left,
+.center {
+    display: flex;
+    background: #d8000000;
+    padding: 12px;
+    border: none;
+    border-radius: 20;
+
+
+}
+
+.right {
+    top: 3em;
+    left: 3em;
+}
+
+.left {
+    top: 3em;
+    right: 3em;
+}
+
+.down {
+    top: 6em;
+}
+
+.up-triangle {
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 20px #e69191;
+}
+
+.right-triangle {
+    position: absolute;
+    bottom: 8px;
+    right: 0px;
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 20px#525252;
+    transform: rotate(90deg);
+}
+
+.down-triangle {
+    position: absolute;
+    bottom: 0px;
+    right: 8px;
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 20px#525252;
+    transform: rotate(180deg);
+}
+
+.left-triangle {
+    position: absolute;
+    bottom: 8px;
+    left: 1px;
+    margin: auto;
+    width: 65%;
+    height: 65%;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 20px#525252;
+    transform: rotate(-90deg);
+}
+
+.up-triangle,
+.right-triangle,
+.down-triangle,
+.left-triangle {
+    border-bottom: solid 20px #e69191;
+
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10pc;
+}
+
+.control-button {
+    padding: 10px;
+    font-size: 24px;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.fast-forward i,
+.stop i,
+.rewind i {
+    color: #e69191;
+
+}
+
+
+/**BUTTON*/
+.power-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 120px;
+}
+
+.power-button {
+    color: #e69191;
+}
+
+.control-button {
+    padding: 10px;
+    font-size: 24px;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+input[type=range][orient=vertical] {
+    appearance: slider-vertical;
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+   
+
+}
+.volume1 {
+    margin-left: -190px;
+    color: #e69191;
+    cursor: pointer;
+
+
+}
+
+
+
+
+.up {
+    display: inline-flexbox;
+}
+
+/* 
+
+MONSIEUR
+
+
+ */
+/* style.css */
