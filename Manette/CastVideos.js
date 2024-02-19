@@ -44,6 +44,8 @@ document.getElementById('controlStop').addEventListener('click', () => {
     if (currentMediaSession) {
         if (isPlaying) {
             currentMediaSession.pause(null, onMediaCommandSuccess, onError);
+    document.getElementById('controlStop').style.display = 'none';
+
         } else {
             currentMediaSession.play(null, onMediaCommandSuccess, onError);
         }
