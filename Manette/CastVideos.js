@@ -9,8 +9,6 @@ const currentTimeElement = document.getElementById('currentTime');
 const totalTimeElement = document.getElementById('totalTime');
 const defaultContentType = 'video/mp4';
 const applicationID = '3DDC41A0';
-// Celui par défault c'est "applicationID = ''"
-const sessionRequest = new chrome.cast.SessionRequest(chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID);
 const videoList = [
     'https://transfertco.ca/video/DBillPrelude.mp4',
     'https://transfertco.ca/video/DBillSpotted.mp4',
