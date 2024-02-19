@@ -44,7 +44,7 @@ document.getElementById('controlStop').addEventListener('click', () => {
     if (currentMediaSession) {
         if (isPlaying) {
             currentMediaSession.pause(null, onMediaCommandSuccess, onError);
-            document.getElementById('controlStop').style.display = document.getElementById("controlForward");
+            document.getElementById('controlStop') = document.getElementById("controlForward");
 
         } else {
             currentMediaSession.play(null, onMediaCommandSuccess, onError);
