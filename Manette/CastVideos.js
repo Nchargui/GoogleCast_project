@@ -16,6 +16,8 @@ const videoList = [
     // Add more video URLs as needed
 ];
 
+var controlStop = document.getElementById('controlStop');value
+
 document.getElementById('power-button').addEventListener('click', () => {
     initializeApiOnly();
 
@@ -44,7 +46,9 @@ document.getElementById('controlStop').addEventListener('click', () => {
     if (currentMediaSession) {
         if (isPlaying) {
             currentMediaSession.pause(null, onMediaCommandSuccess, onError);
-            document.getElementById('controlStop') = document.getElementById("controlForward");
+            var StylecontrolStop = window.getComputedStyle(controlStop);
+            destina
+
 
         } else {
             currentMediaSession.play(null, onMediaCommandSuccess, onError);
