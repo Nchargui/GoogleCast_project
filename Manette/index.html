@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
-
+    <script type="text/javascript"
+        src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+ 
     <link rel="stylesheet" href="style.css" />
-
+ 
 </head>
-
+ 
 <body>
-
+ 
     <div class="main">
         <div class="Manette">
             <div class="up">
-                <button class="power-button" id="power-button" onclick="turnOffDevice()">
+                <button class="power-button" id="power-button">
                     <i class="fas fa-power-off"></i> </button>
-
+ 
                 <input class="volume1" type="range" orient="vertical" />
                 <div class="volume-control" id="volumeControl">
                     <div class="volume-bar" id="volumeBar"></div>
                     <div class="volume-knob" id="volumeKnob"></div>
                 </div>
             </div>
-
+ 
             <div class="wrapper">
                 <div class="center">
                     <div class="center-circle"></div>
                 </div>
-
+ 
                 <div class="up direction">
                     <div class="up-triangle"></div>
                 </div>
-
+ 
                 <div class="right direction">
-                    <div class="right-triangle"></div>
+                    <div class="right-triangle" id="nextVideo"></div>
                 </div>
                 <div class="down direction">
                     <div class="down-triangle"></div>
                 </div>
                 <div class="left direction">
-                    <div class="left-triangle"></div>
+                    <div class="left-triangle"id="nextVideo"></div>
                 </div>
+ 
+               
                 <div class="control-panel">
-                    <button class="control-button fast-forward"><i class="fas fa-fast-backward"></i></button>
+                    <button class="control-button fast-backward"><i class="fa fa-backward"
+                            aria-hidden="true"></i></button>
+                    <button class="control-button replay" id="controlReplay"><i class="fa-solid fa-repeat"></i></button>
                     <button class="control-button stop" id="controlStop"><i class="fas fa-stop"></i></button>
-                    <button class="control-button fast-forward" id="controlForward"><i class="fas fa-fast-forward"></i></button>
-
+                    <button class="control-button fast-forward" id="controlForward"><i class="fa fa-forward"
+                            aria-hidden="true"></i></button>
+ 
                 </div>
-
-
+ 
+ 
                 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-                <script src="script.js"></script>
-<!-- 
-
-
-
-                 -->
                 <script src="CastVideos.js" type="module"></script>
-
-
+ 
+ 
             </div>
         </div>
     </div>
     </div>
 </body>
-
+ 
 </html>

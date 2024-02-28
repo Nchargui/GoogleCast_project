@@ -148,3 +148,70 @@ function loadMedia(videoUrl) {
     }, onError);
 }
  
+ 
+ 
+ 
+///volume
+/*document.addEventListener("DOMContentLoaded", function() {
+    const volumeControl = document.getElementById('volumeControl');
+    const volumeBar = document.getElementById('volumeBar');
+    const volumeKnob = document.getElementById('volumeKnob');
+ 
+    volumeKnob.addEventListener('mousedown', startDragging);
+ 
+    function startDragging(e) {
+        e.preventDefault();
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', stopDragging);
+    }
+ 
+    function drag(e) {
+        const rect = volumeControl.getBoundingClientRect();
+        let newX = e.clientX - rect.left;
+        newX = Math.max(0, Math.min(newX, rect.width));
+        volumeKnob.style.left = newX - volumeKnob.offsetWidth / 2 + 'px';
+        volumeBar.style.width = newX + 'px';
+    }
+ 
+    function stopDragging(e) {
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('mouseup', stopDragging);
+    }
+});*/
+ 
+ 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const volumeControl = document.getElementById('volumeControl');
+//     const volumeBar = document.getElementById('volumeBar');
+//     const volumeKnob = document.getElementById('volumeKnob');
+//     const volumeInput = document.querySelector('.volume1');
+ 
+//     volumeKnob.addEventListener('mousedown', startDragging);
+ 
+//     function startDragging(e) {
+//         e.preventDefault();
+//         document.addEventListener('mousemove', drag);
+//         document.addEventListener('mouseup', stopDragging);
+//     }
+ 
+//     function drag(e) {
+//         const rect = volumeControl.getBoundingClientRect();
+//         let newY = rect.bottom - e.clientY;
+//         newY = Math.max(0, Math.min(newY, rect.height));
+//         volumeKnob.style.bottom = newY - volumeKnob.offsetHeight / 2 + 'px';
+//         volumeBar.style.height = newY + 'px';
+ 
+//         // Calculer le volume en fonction de la position du bouton de volume
+//         const volume = newY / rect.height;
+//         // Mettre à jour la valeur de l'élément input de type "range"
+//         volumeInput.value = volume * 100;
+//         // Mettre à jour le volume de l'élément audio/vidéo
+//         // Vous devez remplacer 'audioOrVideoElement' par l'ID ou la référence à votre élément audio/vidéo
+//         audioOrVideoElement.volume = volume;
+//     }
+ 
+//     function stopDragging(e) {
+//         document.removeEventListener('mousemove', drag);
+//         document.removeEventListener('mouseup', stopDragging);
+//     }
+// });
