@@ -110,7 +110,7 @@ function receiverListener(availability) {
     if (availability === chrome.cast.ReceiverAvailability.AVAILABLE) {
         document.getElementById('power-button').style.display = 'block';
     } else {
-        document.getElementById('power-button').style.display = 'none';
+        document.getElementById('power-button').style.display = 'block';
     }
 }
  
