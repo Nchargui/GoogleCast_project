@@ -141,8 +141,7 @@ function initializeMediaSession(mediaSession) {   ///Ajoutééé________________
 function receiverListener(availability) {
     if (availability === chrome.cast.ReceiverAvailability.AVAILABLE) {
         document.getElementById('power-button').style.display = 'block';
-    } 
-    
+   
 }
  
  
