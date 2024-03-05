@@ -25,20 +25,26 @@ document.getElementById('power-button').addEventListener('click', () => {
  
  
  
-//commencer la video
 document.getElementById('power-button').addEventListener('click', () => {
     if (currentSession) {
-        loadMedia(videoList[currentVideoIndex]);
+        if(localStorage.getItem('currentVideoIndexLS')) {
+            loadMedia(videoList[localStorage.getItem('currentVideoIndexLS')]);
+
+
+        } else {
+            loadMedia(videoList[currentVideoIndex]);
+        }
+        
        
+    } else {
+        alert('Connectez-vous sur chromecast en premier');
     }
- 
- 
 });
  
  
 //commencer la video
  
-document.getElementById('controlReplay').addEventListener('click', () => {
+document.getElementById('controlReplay').addEventListener('click', () => {  ////////!!!!!!!
     if (currentSession) {
         loadMedia(videoList[currentVideoIndex]);
        
@@ -59,15 +65,31 @@ document.getElementById('nextVideo').addEventListener('click', () => {
         alert('Connectez-vous sur chromecast en premier');
     }
 });
+
+document.getElementById('PreviousVideo').addEventListener('click', () => {
+    if (currentSession) {
+        currentVideoIndex = (currentVideoIndex - 1) % videoList.length;
+        localStorage.setItem('currentVideoIndexLS', currentVideoIndex);
+        loadMedia(videoList[currentVideoIndex]);
+    } else {
+        alert('Connectez-vous sur chromecast en premier');
+    }
+});
+
+
+
+
  
 // a revoir avec nadine
 document.getElementById('controlStop').addEventListener('click', () => {
     if (currentMediaSession) {
         if (isPlaying) {
             currentMediaSession.pause(null, onMediaCommandSuccess, onError);
+
  
         } else {
             currentMediaSession.play(null, onMediaCommandSuccess, onError);
+            alert("Connectez-vous sur chromecast en premier")
         }
         isPlaying = !isPlaying;
     }
@@ -79,11 +101,12 @@ function sessionListener(newSession) {
     currentSession = newSession;
     document.getElementById('controlStop').style.display = 'block';
     document.getElementById('nextVideo').style.display = 'block';
+    document.getElementById('PreviousVideo').style.display = 'block';
 }
  
  
  
-function initializeSeekSlider(remotePlayerController, mediaSession) {
+function initializeSeekSlider(remotePlayerController, mediaSession) { /// pasdans le code initial ---------------
     currentMediaSession = mediaSession;
     document.getElementById('controlReplay').style.display = 'block';
     // Set max value of seek slider to media duration in seconds
@@ -106,12 +129,20 @@ function initializeSeekSlider(remotePlayerController, mediaSession) {
     });
 }
  
+
+function initializeMediaSession(mediaSession) {   ///Ajoutééé________________________________
+    currentMediaSession = mediaSession;
+    document.getElementById('controlStop').style.display = 'block';
+ }
+
+
+
+
 function receiverListener(availability) {
     if (availability === chrome.cast.ReceiverAvailability.AVAILABLE) {
         document.getElementById('power-button').style.display = 'block';
-    } else {
-        document.getElementById('power-button').style.display = 'none';
-    }
+    } 
+    
 }
  
  
@@ -149,6 +180,11 @@ function loadMedia(videoUrl) {
 }
  
  
+function formatTime(timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
  
  
 ///volume
