@@ -2,19 +2,32 @@ let currentSession;
 let currentMediaSession;
 let isPlaying = true;
 let currentVideoIndex = 0;
+let volumeLevel = 1;
 let currentVideoUrl;
 let updateInterval;
+const muteToggle = document.getElementById('btnMute');
 const seekSlider = document.getElementById('seekSlider');
 const currentTimeElement = document.getElementById('currentTime');
 const totalTimeElement = document.getElementById('totalTime');
 const defaultContentType = 'video/mp4';
-const applicationID = '3DDC41A0';
+const applicationID = '3DDC41A0'; ///////
 const videoList = [
     'https://transfertco.ca/video/DBillPrelude.mp4',
     'https://transfertco.ca/video/DBillSpotted.mp4',
     'https://transfertco.ca/video/usa23_7_02.mp4'
  
 ];
+
+/// function poue changer btn play icon
+
+var controlStop = document.getElementById("controlStop");
+var controlPlay = document.getElementById("controlPlay");
+
+
+function changePlayBtn(){
+    controlPlay.style.display = "block";
+    controlStop.style.display = "none"
+}
  
 //Le bouton d'allumage
 document.getElementById('power-button').addEventListener('click', () => {
@@ -85,11 +98,15 @@ document.getElementById('controlStop').addEventListener('click', () => {
     if (currentMediaSession) {
         if (isPlaying) {
             currentMediaSession.pause(null, onMediaCommandSuccess, onError);
+            changePlayBtn()
+            
 
  
         } else {
             currentMediaSession.play(null, onMediaCommandSuccess, onError);
+            changePlayBtn()
             alert("Connectez-vous sur chromecast en premier")
+            
         }
         isPlaying = !isPlaying;
     }
@@ -165,6 +182,9 @@ function initializeApiOnly() {
     chrome.cast.initialize(apiConfig, onInitSuccess, onError);
 }
  
+
+
+
 function loadMedia(videoUrl) {
     currentVideoUrl = videoUrl;
     const mediaInfo = new chrome.cast.media.MediaInfo(videoUrl, defaultContentType);
@@ -176,8 +196,28 @@ function loadMedia(videoUrl) {
         console.log('Media chargé avec succès');
         initializeSeekSlider(remotePlayerController, mediaSession);
     }, onError);
-}
+}}
  
+
+function initializeMuted(remotePlayerController, remotePlayer, mediaSession) {
+    //Ajout listener + boutton
+    muteToggle.addEventListener('click', () => {
+        if (currentMediaSession.volume.muted) {
+            // Unmute
+            const volume = new chrome.cast.Volume(lastVolumeLevel, false);
+            const volumeRequest = new chrome.cast.media.VolumeRequest(volume);
+            currentMediaSession.setVolume(volumeRequest, onMediaCommandSuccess, onError);
+        } else {
+            
+            
+            lastVolumeLevel = currentMediaSession.volume.level;
+            // Mute
+            const volume = new chrome.cast.Volume(0, true);
+            const volumeRequest = new chrome.cast.media.VolumeRequest(volume);
+            currentMediaSession.setVolume(volumeRequest, onMediaCommandSuccess, onError);
+        }
+    });
+}
  
 function formatTime(timeInSeconds) {
     const minutes = Math.floor(timeInSeconds / 60);
@@ -185,7 +225,7 @@ function formatTime(timeInSeconds) {
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
  
- 
+
 ///volume
 /*document.addEventListener("DOMContentLoaded", function() {
     const volumeControl = document.getElementById('volumeControl');

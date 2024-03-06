@@ -192,7 +192,8 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10pc;
+    margin-top: 11pc;
+
 }
  
 .control-button {
@@ -208,8 +209,12 @@ div {
 .fast-backward i,
 .stop i,
 .rewind i,
-.replay i{
+.replay i,
+#controlPlay
+{
     color: #e69191;
+    
+    
  
 }
  
@@ -264,3 +269,18 @@ input[type=range][orient=vertical] {
     display: inline-flexbox;
 }
  
+#controlPlay{
+    font-size: 34px;
+}
+
+
+
+#btnMute{
+    color: #e69191;
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-size: 23px;
+
+
+}
