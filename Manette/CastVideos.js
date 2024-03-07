@@ -104,9 +104,9 @@ document.getElementById('controlStop').addEventListener('click', () => {
 
 function sessionListener(newSession) {
     currentSession = newSession;
-    document.getElementById('controlReplay').style.display = 'block';
-    document.getElementById('nextVideo').style.display = 'block';
-    document.getElementById('PreviousVideo').style.display = 'block';
+    // document.getElementById('controlReplay').style.display = 'block';
+    // document.getElementById('nextVideo').style.display = 'block';
+    // document.getElementById('PreviousVideo').style.display = 'block';
  }
 
 
