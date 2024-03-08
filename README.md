@@ -25,9 +25,11 @@ Boutons utilisables ----------------
 3) Bouton stop - met en pause la vidéo
 4) Bouton re-play - répète la vidéo actuel
 5) bouton Avancé - change la vidéo pour la prochaine de la liste de visionnement
+6) bouton mute - Enlève le son de la vidéo
 
 Boutons non-utilisables ----------------
 1) Bouton video précédente - devait mettre la vidéo précédente de la liste de visionnement
-2) bouton up et down - pas d'utilité original; mit comme décoration (choix visuelle)
+2) bouton up et down (triangle vers le haut et le bas) - pas d'utilité original; mit comme décoration (choix visuelle)
 3) bouton vitesse (avancer et reculer plus rapidement) - devait accélerer ou reculer la vidéo actuelle
 4) bouton gris au milieu des fléches - aucune utilisation (choix viusuelle)
+5) Bar de son - choix visuelle, ne change pas le son.
