@@ -33,3 +33,23 @@ Boutons non-utilisables ----------------
 3) bouton vitesse (avancer et reculer plus rapidement) - devait accélerer ou reculer la vidéo actuelle
 4) bouton gris au milieu des fléches - aucune utilisation (choix viusuelle)
 5) Bar de son - choix visuelle, ne change pas le son.
+
+CONTRIBUTION ======================================================================================
+
+Notes : les commits de ce répertoire ont été faite régulièrement sans compter les avancés personnels des membres de l'équipes; les changements se fesait principalment toujours à deux, aucune avancé de la mannette n'a était faite sans la présence de l'autre membres de l'équipe.
+
+le développemnt du HTML et du css - Aya et Nadine 
+
+La mise ne place de nos bouton par rapport aux fonctions dans le code pour le chrome cast - Nadine et Aya
+
+Changement et fix des bugs liés à l'affichage - Aya et Nadine 
+
+Changement sur le visuel de la manettes - Aya et Nadine
+
+Présences lors des tests des utilisateurs - Aya et Nadine 
+
+Rédaction des documents pour les tests - Aya
+
+Rédaction du ReadMe - Nadine 
+
+
