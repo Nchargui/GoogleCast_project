@@ -20,12 +20,14 @@ LES BOUTONS ====================================================================
 
 Boutons utilisables ----------------
 
-= Bouton power - Connecte la mannete au chrome cast 
-= Bouton play - met en marche la vidéo
-= Bouton stop - met en pause la vidéo
-= Bouton re-play - répète la vidéo actuel
-= bouton Avancé - change la vidéo pour la prochaine de la liste de visionnement
+1) Bouton power - Connecte la mannete au chrome cast 
+2) Bouton play - met en marche la vidéo
+3) Bouton stop - met en pause la vidéo
+4) Bouton re-play - répète la vidéo actuel
+5) bouton Avancé - change la vidéo pour la prochaine de la liste de visionnement
 
 Boutons non-utilisables ----------------
-= Bouton video pr - met en pause la vidéo
-=
+1) Bouton video précédente - devait mettre la vidéo précédente de la liste de visionnement
+2) bouton up et down - pas d'utilité original; mit comme décoration (choix visuelle)
+3) bouton vitesse (avancer et reculer plus rapidement) - devait accélerer ou reculer la vidéo actuelle
+4) bouton gris au milieu des fléches - aucune utilisation (choix viusuelle)
